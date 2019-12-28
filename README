@@ -1,0 +1,6 @@
+- Install stow
+- export DOT=$HOME/git/dotfiles
+- cd $DOT
+- mkdir -p __setup bin/bin bash git
+- mv ~/.gitconfig $DOT/git/
+- stow -v -R -t ~ $DOT/git 
