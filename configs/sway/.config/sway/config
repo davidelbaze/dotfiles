@@ -89,7 +89,6 @@ input * xkb_layout "fr(mac)"
 
     # Kill focused window
     bindsym $mod+Shift+q kill
-    bindsym $alt+F4 kill
 
     # Start your launcher
     bindsym $mod+space exec rofi -show run -lines 3 -eh 2 -width 100 -font "SFNS Display 14" -theme /home/david/arc.rasi
