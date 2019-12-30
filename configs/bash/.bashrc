@@ -8,6 +8,15 @@ case $- in
       *) return;;
 esac
 
+
+if [ "$(tty)" = "/dev/tty2" ]; then
+	exec sway
+fi
+
+if [ "$(tty)" = "/dev/tty3" ]; then
+	exec startxfce4
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
