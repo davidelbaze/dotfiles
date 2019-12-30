@@ -124,3 +124,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+if [ -z "$BASH_EXECUTION_STRING" ]; then exec fish; fi
+
+
+
