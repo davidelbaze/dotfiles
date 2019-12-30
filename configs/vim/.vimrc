@@ -16,6 +16,13 @@ filetype indent plugin on
 " Enable syntax highlighting
 syntax on
 
+" Colorscheme
+colorscheme nord
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
+
+
 "------------------------------------------------------------
 " Must have options {{{1
 "
@@ -51,6 +58,9 @@ set hlsearch
 " such, it may be a good idea to disable them and use the securemodelines
 " script, <http://www.vim.org/scripts/script.php?script_id=1876>.
 " set nomodeline
+
+" ???
+set noshowmode
 
 
 "------------------------------------------------------------
@@ -98,6 +108,15 @@ set t_vb=
 
 " Enable use of the mouse for all modes
 "set mouse=a
+
+" Use UTF-8 encoding
+set encoding=UTF-8
+
+" Ignore whitespace when diffing
+set diffopt+=iwhite
+
+" Set system clipboard
+set clipboard^=unnamed,unnamedplus
 
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
