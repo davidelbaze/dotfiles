@@ -1,0 +1,132 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 30,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["tray", "cpu", "memory", "temperature", "backlight", "pulseaudio", "network", "battery", "clock"],
+    //"modules-right": ["tray", "custom/spotify", "custom/weather", "custom/mail", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
+    "sway/mode": {
+        "format": " <span style=\"italic\">{}</span>"
+    },
+    "sway/workspaces": {
+        "format": "{icon} {name}",
+	"format-icons":{
+		"1:1.Console":"",
+		"2:2.Dev":"",
+		"3:3.Spotify":"",
+		"4:4.Web":""
+	},
+	"persistent_workspaces":{
+		"1:1.Console":[],
+		"2:2.Dev":[],
+		"3:3.Spotify":[],
+		"4:4.Web":[]
+	},
+        "disable-scroll": false
+    },
+    "sway/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-alt": "{volume} {icon}",
+        "format-alt-click": "click-right",
+        "format-muted": "",
+        "format-icons": {
+            "phone": [" ", " ", " ", " "],
+            "default": ["", "", "", ""]
+        },
+        "scroll-step": 10,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },"clock": {
+        "format": "{:%a %d %b %H:%M}",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "states": {
+            "idle": 0,
+            "warning": 12,
+            "critical": 50
+        }
+    },
+    "memory": {
+        "format": "{percentage}% ",
+        "states": {
+            "idle": 0,
+            "warning": 25,
+            "critical": 50
+        }
+    },
+    "temperature": {
+	// "thermal-zone": 2,
+	// "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+	"critical-threshold": 70,
+	"format-critical": "{temperatureC}°C {icon}",
+	"format": "",
+        "format-alt":"{temperatureC}°C",
+        "format-alt-click":"click-right",
+	"format-icons": ["", "", ""]
+    },
+    "battery": {
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "",
+        "format-plugged": "",
+        "format-alt": "{capacity}%",
+        "format-alt-click": "click-right",
+        "interval": 30,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+    "network": {
+	"format-wifi": "{essid} ({signalStrength}%)  ",
+	"format-ethernet": "",
+	"formet-disconnected": "",
+        //"format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
+        //"format-icons": {
+        //    "wifi": ["w1", "w2" ,""], // ? ? OK
+        //    "ethernet": [""],
+        //    "disconnected": [""] // Disconnected
+        //},
+        "on-click": "urxvt -e nmtui",
+        "tooltip": false
+    },
+    
+    "backlight": {
+        "format": "{icon}",
+        "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": ["", ""],
+        "on-scroll-down": "light -A 1",
+        "on-scroll-up": "light -U 1"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": false
+    },
+    "custom/test": {
+        "format": "{}",
+        "exec": "/tmp/test blub",
+        "param": "blah",
+        "interval": 5
+    },
+    "tray": {
+        "icon-size": 10
+    }
+}
+
+
