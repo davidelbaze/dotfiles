@@ -1,42 +1,31 @@
-*.background: #383c4a
-*.foreground: #D2D2D2
+!URxvt.font: xft:DejaVu Sans Mono: size=10
+URxvt.font: xft:DejaVuSansMono Nerd Font Mono: size=10
+!URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true
+URxvt*scrollBar: false
+URxvt*saveLines: 10000
+URxvt.perl-ext-common: selection-to-clipboard
 
-!black
-*color0: #383c4a
-*color8: #404552
+!*background:   [97]#282a36
+*background:   #282a36
+*foreground:   #eff0eb
+*cursorColor:  #9aedfe
 
-!red
-*color1: #9A4138
-*color9: #E7766B
+*color0:      #33303b
+*color8:      #4f4b58
+*color1:      #ff5c57
+*color9:      #ff5c57
+*color2:      #5af78e
+*color10:     #5af78e
+*color3:      #f3f99d
+*color11:     #f3f99d
+*color4:      #57c7ff
+*color12:     #57c7ff
+*color5:      #ff6ac1
+*color13:     #ff6ac1
+*color6:      #9aedfe
+*color14:     #9aedfe
+*color7:      #eff0eb
+*color15:     #eff0eb
 
-!green
-*color2: #4BEC90
-*color10: #3CBF75
 
-!yellow
-*color3: #D8D782
-*color11: #CFCD63
 
-!blue
-*color4: #5294e2
-*color12: #579CEF
-
-!magenta
-*color5: #CE50DD
-*color13: #E7766B
-
-!cyan
-*color6: #6BE5E7
-*color14: #90FDFF
-
-!white
-*color7: #CCCCCC
-*color15: #FFFFFF
-
-rofi.fake-background:                screenshot
-rofi.color-normal: #000000
-
-!!!!!!!!!!!!!!!!!! URXVT 
-
-URxvt.font : xft:Terminus:antialias=false:size=20
-URxvt.scrollBar: false
