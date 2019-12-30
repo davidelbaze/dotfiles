@@ -10,8 +10,8 @@
 set $mod Mod4
 
 #font pango:Manjari 18
-font pango:SFNS Display 8
-#font pango:DejaVu Sans 8
+#font pango:SFNS Display 8
+font pango:DejaVu Sans 9
 #
 
 hide_edge_borders both
