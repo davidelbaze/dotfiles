@@ -15,8 +15,10 @@ Plug 'itchyny/lightline.vim'
 " Initialize plugin system
 call plug#end()
 
+set cursorline
 
-
+let mapleader = ","
+nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
 "------------------------------------------------------------
 " Features {{{1
 "
@@ -126,7 +128,7 @@ set visualbell
 set t_vb=
 
 " Enable use of the mouse for all modes
-"set mouse=a
+set mouse=a
 
 " Use UTF-8 encoding
 set encoding=UTF-8
