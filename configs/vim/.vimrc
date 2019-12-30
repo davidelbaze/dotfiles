@@ -1,4 +1,23 @@
 "------------------------------------------------------------
+" Vim-Plug {{{1
+"
+" Install Vim Plug
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+" :PlugInstall to install plugins
+" :PlugUpgrade to upgrade vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'arcticicestudio/nord-vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'itchyny/lightline.vim'
+" Initialize plugin system
+call plug#end()
+
+
+
+"------------------------------------------------------------
 " Features {{{1
 "
 " These options and commands enable some very useful features in Vim, that
