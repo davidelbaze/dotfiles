@@ -187,7 +187,7 @@ input "1739:0:Synaptics_TM3381-002" {
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+d layout tabbed
-    bindsym $mod+qy layout toggle split
+    bindsym $mod+q layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
