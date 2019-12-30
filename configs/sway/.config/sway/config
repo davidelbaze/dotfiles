@@ -99,7 +99,7 @@ input "1739:0:Synaptics_TM3381-002" {
     bindsym $mod+Return exec $term
     
     # Lock session
-    bindsym $mod+l exec swaylock
+    bindsym $mod+x exec swaylock
 
     # Kill focused window
     bindsym $mod+Shift+q kill
