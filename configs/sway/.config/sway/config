@@ -30,6 +30,7 @@ set $term (alacritty || urxvt) # urxvt
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $lock swaylock -f -c 000000
 
 ### Output configuration
 #
@@ -101,7 +102,8 @@ input "1739:0:Synaptics_TM3381-002" {
     bindsym $mod+Return exec $term
     
     # Lock session
-    bindsym $mod+x exec swaylock
+    bindsym $mod+x exec $lock
+    bindsym $mod+l exec $lock
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -129,10 +131,10 @@ input "1739:0:Synaptics_TM3381-002" {
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    #bindsym $mod+$left focus left
+    #bindsym $mod+$down focus down
+    #bindsym $mod+$up focus up
+    #bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -140,10 +142,10 @@ input "1739:0:Synaptics_TM3381-002" {
     bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    #bindsym $mod+Shift+$left move left
+    #bindsym $mod+Shift+$down move down
+    #bindsym $mod+Shift+$up move up
+    #bindsym $mod+Shift+$right move right
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
@@ -226,10 +228,10 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    #bindsym $left resize shrink width 10px
+    #bindsym $down resize grow height 10px
+    #bindsym $up resize shrink height 10px
+    #bindsym $right resize grow width 10px
 
     # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
