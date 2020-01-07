@@ -1,3 +1,6 @@
 [submodule "configs/tmux/.tmux/tmux-yank"]
 	path = configs/tmux/.tmux/tmux-yank
 	url = https://github.com/tmux-plugins/tmux-yank
+[submodule "configs/tmux/.tmux/tmux-copycat"]
+	path = configs/tmux/.tmux/tmux-copycat
+	url = https://github.com/tmux-plugins/tmux-copycat
