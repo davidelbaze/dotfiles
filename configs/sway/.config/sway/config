@@ -159,7 +159,7 @@ input "1739:0:Synaptics_TM3381-002" {
     bindsym $mod+eacute workspace 2:2.Dev
     bindsym $mod+quotedbl workspace 3:3.Spotify
     bindsym $mod+apostrophe workspace 4:4.Web
-    bindsym $mod+parenleft workspace number 5 
+    bindsym $mod+parenleft workspace 5:5.Kicad 
     bindsym $mod+minus workspace number 6 
     bindsym $mod+egrave workspace number 7 
     bindsym $mod+underscore workspace number 8
@@ -170,7 +170,7 @@ input "1739:0:Synaptics_TM3381-002" {
     bindsym $mod+2 move container to workspace 2:2.Dev 
     bindsym $mod+3 move container to workspace 3:3.Spotify 
     bindsym $mod+4 move container to workspace 4:4.Web 
-    bindsym $mod+5 move container to workspace number 5
+    bindsym $mod+5 move container to workspace 5:5.Kicad
     bindsym $mod+6 move container to workspace number 6
     bindsym $mod+7 move container to workspace number 7
     bindsym $mod+8 move container to workspace number 8

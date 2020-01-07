@@ -99,3 +99,7 @@ window#waybar{
     color:      rgba(238, 46, 36, 1);
     font-size:     12px;    
 }
+
+#battery.full {
+    color:      rgba(46, 238, 36, 1);
+}

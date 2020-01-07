@@ -82,7 +82,8 @@
         "interval": 30,
         "states": {
             "warning": 25,
-            "critical": 10
+            "critical": 10,
+            "full": 100
         },
         "tooltip": false
     },

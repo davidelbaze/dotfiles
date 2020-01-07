@@ -6,6 +6,7 @@
 
 [diff]
     tool = meld
+	submodule = log
 
 [difftool]
     prompt = false
