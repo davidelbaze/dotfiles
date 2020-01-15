@@ -1,0 +1,9 @@
+--style=1tbs 
+--break-blocks=all
+--pad-oper
+--align-pointer=type
+--align-reference=type
+--lineend=linux
+--recursive
+--suffix=none
+--indent-preproc-define 

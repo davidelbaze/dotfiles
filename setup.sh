@@ -11,6 +11,7 @@ git submodule update
 
 # what directories should be installable by all users including the root user
 base=(
+        astyle
 	bash
 	git
 	Xresources
@@ -21,6 +22,7 @@ base=(
         vim
         yay
         tmux
+        zsh
 )
 
 # run the stow command for the passed in directory ($2) in location ($1)
@@ -31,7 +33,7 @@ stowit() {
 	# -v verbose
 	# -R recurseive
 	# -t target
-	stow -v -R -t ${usr} ${app}
+	stow -R -t ${usr} ${app}
 }
 
 echo ""
