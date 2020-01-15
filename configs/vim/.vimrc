@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+Plug 'jceb/vim-orgmode'
 " Initialize plugin system
 call plug#end()
 
