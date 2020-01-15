@@ -16,6 +16,62 @@ Plug 'jceb/vim-orgmode'
 " Initialize plugin system
 call plug#end()
 
+
+"{{{ Backup System
+    set backup
+    set undofile
+    set noswapfile
+    set undodir=~/.vim/tmp/undo
+    set backupdir=~/.vim/tmp/backup
+    set backupskip=/tmp/*
+    set writebackup
+    "Meaningful backup name, ex: filename@2015-04-05.14:59
+    au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
+
+"}}}
+
+
+"{{{ Functions
+noremap g= :call Format()<CR>
+function! Format() "{{{
+    " * Removes trailing white spaces
+    " * Removes blank lines at the end of the file
+    " * Replaces tabs with spaces
+    " * Re-Indent
+    "
+    " * If: C, CPP, PHP or Java code: format using 'astyle'
+    " * If: Rust code: format using 'rustfmt'
+    "
+    " * Clear 'formatprg' so `gq` can be used with the default
+    "   behavior
+    let l:winview = winsaveview()
+
+    if &ft ==? 'c' || &ft ==? 'cpp' || &ft ==? 'php'
+        setlocal formatprg=astyle\ --mode=c
+        silent! execute 'norm! gggqG'
+    elseif &ft ==? 'java'
+        setlocal formatprg=astyle\ --mode=java\ --style=java
+        silent! execute 'norm! gggqG'
+    elseif &ft ==? 'rust'
+        setlocal formatprg=rustfmt
+        silent! execute 'norm! gggqG'
+    endif
+
+    silent! call RemoveTrailingSpaces()
+    silent! execute 'retab'
+    silent! execute 'gg=G'
+    call winrestview(l:winview)
+    setlocal formatprg=
+endfunction
+"}}}
+
+function! RemoveTrailingSpaces() "{{{
+    silent! execute '%s/\s\+$//ge'
+    silent! execute 'g/\v^$\n*%$/norm! dd'
+endfunction
+"}}}
+"}}}
+
 set cursorline
 
 let mapleader = ","

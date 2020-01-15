@@ -99,3 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+alias mkdir="mkdir -pv"
+alias grep="grep -n --color"
+alias ls="ls --color -l -h"
+alias sl="ls --color -l -h"
