@@ -13,6 +13,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'jceb/vim-orgmode'
+Plug 'whatyouhide/vim-lengthmatters'
 " Initialize plugin system
 call plug#end()
 
@@ -29,7 +30,6 @@ call plug#end()
     au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
 
 "}}}
-
 
 "{{{ Functions
 noremap g= :call Format()<CR>
